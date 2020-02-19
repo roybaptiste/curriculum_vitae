@@ -1,10 +1,10 @@
 
 CURRENT_UID = $(shell id -u):$(shell id -g)
 DIST_DIR ?= $(CURDIR)/dist
-REPOSITORY_NAME ?= cv
-REPOSITORY_OWNER ?= dduportal
+REPOSITORY_NAME ?= curriculum_vitae
+REPOSITORY_OWNER ?= roybaptiste
 REPOSITORY_BASE_URL ?= https://github.com/$(REPOSITORY_OWNER)/$(REPOSITORY_NAME)
-OWNER_NAME ?= "Damien DUPORTAL"
+OWNER_NAME ?= "Baptiste Roy"
 SHORT_OWNER_NAME ?= $(shell echo "$(OWNER_NAME)" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
 
 ### TRAVIS_BRANCH == TRAVIS_TAG when a build is triggered by a tag as per https://docs.travis-ci.com/user/environment-variables/
