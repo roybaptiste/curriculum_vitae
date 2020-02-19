@@ -1,0 +1,23 @@
+
+services:
+  - docker
+
+script:
+  - make all
+
+before_deploy:
+  - export DEPLOY_DIR=./deploy/
+  - export DEPLOY_BRANCH=gh-pages
+  - make deploy
+
+deploy:
+  - provider: pages
+    local-dir: ./deploy/
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    keep-history: false
+    target-branch: ${DEPLOY_BRANCH}
+    verbose: true
+    on:
+      all_branches: true
+      condition: $TRAVIS_BRANCH != ^gh-pages$
