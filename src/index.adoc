@@ -2,7 +2,7 @@
 Baptiste ROY
 v1.0, 2020-01-30
 :icons: font
-:email:roy.baptiste45@gmail.com
+:email: roy.baptiste45@gmail.com
 :sectlinks:
 :imagesdir: ./images/
 :data-uri:
@@ -18,4 +18,4 @@ Contacts & Réseaux sociaux:: link:mailto:{email}[icon:envelope[] E-Mail `{email
 
 Location:: icon:map-marker[] `5 rue de l'Erre Perche-en-Nocé` image:fr.png[width=15]
 
-Phone icon:phone[]:: * image:fr.png[width=15] `+33(0)6 63 15 30 15`
+Phone icon:phone[] `+33(0)6 63 15 30 15`
