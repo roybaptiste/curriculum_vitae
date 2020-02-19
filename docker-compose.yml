@@ -1,0 +1,30 @@
+version: '3.3'
+
+services:
+  html:
+    image: asciidoctor/docker-asciidoctor@sha256:56fd995a52c5b997c70cbcba49d93cb7f70a911e69c1cf7029e8135dc11e5292
+    command: >
+      asciidoctor /documents/index.adoc
+      -a cv-url="${CV_URL}"
+      -a source-url="${SOURCE_URL}"
+      -a short-owner-name="${SHORT_OWNER_NAME}"
+      -a toc=left
+      -a toclevels=2
+      -o /dist/index.html
+    user: ${CURRENT_UID}
+    volumes:
+      - ./src:/documents
+      - ./dist:/dist
+
+  pdf:
+    image: asciidoctor/docker-asciidoctor@sha256:56fd995a52c5b997c70cbcba49d93cb7f70a911e69c1cf7029e8135dc11e5292
+    command: >
+      asciidoctor-pdf /documents/index.adoc 
+      -a cv-url="${CV_URL}"
+      -a source-url="${SOURCE_URL}"
+      -a short-owner-name="${SHORT_OWNER_NAME}"
+      -o /dist/cv-"${SHORT_OWNER_NAME}".pdf
+    user: ${CURRENT_UID}
+    volumes:
+      - ./src:/documents
+      - ./dist:/dist

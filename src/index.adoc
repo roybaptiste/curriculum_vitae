@@ -1,0 +1,21 @@
+# Curriculum Vitae | Baptiste ROY
+Baptiste ROY
+v1.0, 2020-01-30
+:icons: font
+:email:roy.baptiste45@gmail.com
+:sectlinks:
+:imagesdir: ./images/
+:data-uri:
+
+## icon:user[] Personel
+
+Qui-suis-je?:: Baptiste ROY - icon:birthday-cake[] `20/08/1990`
+
+Contacts & Réseaux sociaux:: link:mailto:{email}[icon:envelope[] E-Mail `{email}`]
+  | link:https://github.com/roybaptiste[icon:github[] Github `roybaptiste`,window="_blank"]
+  | link:https://twitter.com/BaptisteRoy37[icon:twitter[] `@BaptisteRoy37`,window="_blank"]
+  | link:https://www.linkedin.com/in/roy-baptiste/[icon:linkedin[] Linkedin Profile,window="_blank"]
+
+Location:: icon:map-marker[] `5 rue de l'Erre Perche-en-Nocé` image:fr.png[width=15]
+
+Phone icon:phone[]:: * image:fr.png[width=15] `+33(0)6 63 15 30 15`
