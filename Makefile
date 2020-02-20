@@ -59,10 +59,4 @@ deploy:
 	git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
 	git fetch --unshallow origin $(DEPLOY_BRANCH) || git fetch origin --prune
 	git worktree remove $(DEPLOY_DIR) --force 2>/dev/null || true
-	git worktree add -b $(DEPLOY_BRANCH) $(DEPLOY_DIR) origin/$(DEPLOY_BRANCH) 2>/dev/null \
-		|| git worktree add --force $(DEPLOY_DIR) origin/$(DEPLOY_BRANCH) 2>/dev/null
-	echo $(TRAVIS_BRANCH)
-	mkdir -p $(DEPLOY_DIR)/$(TRAVIS_BRANCH)
-	cp -r ./dist/ $(DEPLOY_DIR)/$(TRAVIS_BRANCH)/
-
 	@echo "Deploy Done"
