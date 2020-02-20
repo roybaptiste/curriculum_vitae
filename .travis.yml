@@ -6,7 +6,7 @@ script:
   - make all
 
 before_deploy:
-  - export DEPLOY_DIR=./deploy/
+  - export DEPLOY_DIR=./dist/
   - export DEPLOY_BRANCH=gh-pages
   - make deploy
 
